@@ -1,3 +1,5 @@
+package Model;
+
 public class Command {
     public String type;
     public String vehicleId;
