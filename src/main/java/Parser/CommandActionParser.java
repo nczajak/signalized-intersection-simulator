@@ -1,7 +1,11 @@
 package Parser;
 
+import Command.Command;
+import Command.CommandAction;
+import Command.CommandActionAddVehicle;
+import Command.CommandActionStep;
+import Command.CommandList;
 import Exception.InvalidCommandTypeException;
-import Model.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +15,7 @@ public class CommandActionParser {
 
     public List<CommandAction> commandsParse(CommandList commandList){
         List<CommandAction> actions = new ArrayList<>();
-        for (Command command : commandList.commands) {
+        for (Command command : commandList.getCommands()) {
             try {
                 CommandAction action = switch (command.type) {
                     case "addVehicle" -> new CommandActionAddVehicle(command);

@@ -1,6 +1,6 @@
 package Parser;
 
-import Model.CommandList;
+import Command.CommandList;
 import com.google.gson.Gson;
 
 import java.io.IOException;

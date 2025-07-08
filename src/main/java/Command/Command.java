@@ -1,4 +1,4 @@
-package Model;
+package Command;
 
 public class Command {
     public String type;
