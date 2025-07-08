@@ -9,4 +9,6 @@ public class TrafficLaneQueue {
         this.vehicles = new ArrayList<>();
     }
 
+
+
 }
