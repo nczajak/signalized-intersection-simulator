@@ -1,10 +1,9 @@
 package Model;
-import Enum.LaneDirection;
 
-public abstract class Lane {
+public abstract class Road {
     private final TrafficLaneQueue trafficLaneQueue;
 
-    public Lane(){
+    public Road(){
         this.trafficLaneQueue = new TrafficLaneQueue();
     }
 }

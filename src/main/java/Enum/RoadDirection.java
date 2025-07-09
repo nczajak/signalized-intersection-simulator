@@ -1,6 +1,6 @@
 package Enum;
 
-public enum LaneDirection {
+public enum RoadDirection {
     NORTH,
     EAST,
     SOUTH,

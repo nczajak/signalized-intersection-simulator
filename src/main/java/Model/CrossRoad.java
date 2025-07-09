@@ -1,20 +1,25 @@
 package Model;
 import java.util.ArrayList;
 import java.util.List;
-import Enum.LaneDirection;
+import Enum.RoadDirection;
 
 public class CrossRoad {
-    List<TrafficLane> trafficLaneList = new ArrayList<>();
+    List<Road> trafficLaneList = new ArrayList<>();
 
     public CrossRoad(){
-        this.trafficLaneList = createLanes();
+        this.trafficLaneList = createRoads();
     }
 
-    private List<TrafficLane> createLanes(){
-        List<TrafficLane> trafficLaneList = new ArrayList<>();
-        for(LaneDirection direction: LaneDirection.values()){
-            TrafficLane trafficLane = new TrafficLane(direction);
-            trafficLaneList.add(trafficLane);
+    private List<Road> createRoads(){
+        List<Road> trafficLaneList = new ArrayList<>();
+        for(RoadDirection direction: RoadDirection.values()){
+           Road road = switch (direction){
+               case NORTH -> new NorthRoad();
+               case EAST -> new EastRoad();
+               case SOUTH -> new SouthRoad();
+               case WEST -> new WestRoad();
+           };
+            trafficLaneList.add(road);
         }
         return trafficLaneList;
     }
