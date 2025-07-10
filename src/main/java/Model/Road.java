@@ -1,9 +1,13 @@
 package Model;
 
 public abstract class Road {
-    private final TrafficLaneQueue trafficLaneQueue;
+    private RoadQueue vehicles;
 
     public Road(){
-        this.trafficLaneQueue = new TrafficLaneQueue();
+        this.vehicles = new RoadQueue();
+    }
+
+    public int getVehiclesAmount(){
+        return this.vehicles.getSize();
     }
 }
