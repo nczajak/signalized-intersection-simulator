@@ -13,4 +13,8 @@ public class Road {
     public int getVehiclesAmount(){
         return this.vehicles.getSize();
     }
+
+    public void addVehicle(Vehicle vehicle){
+
+    }
 }

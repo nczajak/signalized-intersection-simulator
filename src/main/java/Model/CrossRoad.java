@@ -1,22 +1,31 @@
 package Model;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.List;
 import java.util.Comparator;
 import Enum.RoadDirection;
 
 public class CrossRoad {
-    private List<Road> roads = new ArrayList<>();
+    private final Map<RoadDirection,Road> roads = new HashMap<>();
 
     public CrossRoad(){
-        this.roads = createRoads();
+        createRoads();
     }
 
-    private List<Road> createRoads(){
+    private void createRoads(){
         for(RoadDirection direction: RoadDirection.values()){
            Road road = new Road(direction);
-           this.roads.add(road);
+           roads.put(direction,road);
         }
-        return this.roads;
+    }
+
+    public void putVehicleOnValidRoad(Vehicle vehicle){
+        Road road = getRoadByDirection(vehicle.getStartRoadDirection());
+        road.addVehicle(vehicle);
+    }
+
+    public Road getRoadByDirection(RoadDirection direction){
+       return this.roads.get(direction);
     }
 
     public Road getTopPriorityRoad(){
@@ -24,11 +33,7 @@ public class CrossRoad {
     }
 
     private Road getRoadWithLongestQueue(){
-        this.roads.sort(Comparator.comparingInt(Road::getVehiclesAmount).reversed());
-        return roads.getFirst();
     }
 
-    public void putVehicleOnValidRoad(Vehicle vehicle){
-    }
 //    dodac sortowanie po czasie oczekiwania i rzucanie wyjatku w getRoadWithLongestQueue;
 }

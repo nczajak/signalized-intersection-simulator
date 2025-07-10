@@ -14,8 +14,7 @@ public class Simulation {
     }
     public void run(){
         for (CommandAction action: actions){
-            action.applyAction();
+            action.applyAction(crossRoad);
         }
-        this.crossRoad.getTopPriorityRoad();
     }
 }
