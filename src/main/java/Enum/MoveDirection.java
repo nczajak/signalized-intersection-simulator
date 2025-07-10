@@ -1,17 +1,26 @@
 package Enum;
 
 public enum MoveDirection {
-    NorthEast,
-    NorthSouth,
-    NorthWest,
-    EastSouth,
-    EastWest,
-    EastNorth,
-    SouthWest,
-    SouthNorth,
-    SouthEast,
-    WestNorth,
-    WestEast,
-    WestSouth
+    NORTH_EAST,
+    NORTH_SOUTH,
+    NORTH_WEST,
+    EAST_SOUTH,
+    EAST_WEST,
+    EAST_NORTH,
+    SOUTH_WEST,
+    SOUTH_NORTH,
+    SOUTH_EAST,
+    WEST_NORTH,
+    WEST_EAST,
+    WEST_SOUTH;
+
+    public static MoveDirection parse(RoadDirection start, RoadDirection end) {
+        String key = start.name() + "_" + end.name();
+        try {
+            return MoveDirection.valueOf(key);
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Invalid direction combination: " + key);
+        }
+    }
 }
 

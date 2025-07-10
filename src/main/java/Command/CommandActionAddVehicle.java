@@ -12,8 +12,5 @@ public class CommandActionAddVehicle implements CommandAction {
     @Override
     public void applyAction() {
         Vehicle vehicle = new Vehicle(command.vehicleId, command.startRoad, command.endRoad);
-
-        System.out.println("vehicle "+command.vehicleId + command.startRoad + command.endRoad);
-
     }
 }
