@@ -13,13 +13,8 @@ public class CrossRoad {
 
     private List<Road> createRoads(){
         for(RoadDirection direction: RoadDirection.values()){
-           Road road = switch (direction){
-               case NORTH -> new NorthRoad();
-               case EAST -> new EastRoad();
-               case SOUTH -> new SouthRoad();
-               case WEST -> new WestRoad();
-           };
-            this.roads.add(road);
+           Road road = new Road(direction);
+           this.roads.add(road);
         }
         return this.roads;
     }
@@ -33,5 +28,7 @@ public class CrossRoad {
         return roads.getFirst();
     }
 
-//    dodac sortowanie po czasie oczekiwania
+    public void putVehicleOnValidRoad(Vehicle vehicle){
+    }
+//    dodac sortowanie po czasie oczekiwania i rzucanie wyjatku w getRoadWithLongestQueue;
 }

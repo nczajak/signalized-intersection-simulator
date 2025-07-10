@@ -1,10 +1,13 @@
 package Model;
+import Enum.RoadDirection;
 
-public abstract class Road {
+public class Road {
+    private final RoadDirection direction;
     private RoadQueue vehicles;
 
-    public Road(){
+    public Road(RoadDirection direction){
         this.vehicles = new RoadQueue();
+        this.direction = direction;
     }
 
     public int getVehiclesAmount(){

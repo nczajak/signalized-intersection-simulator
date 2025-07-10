@@ -10,4 +10,6 @@ public class Vehicle {
         this.startRoad = startRoad;
         this.endRoad = endRoad;
     }
+
+
 }

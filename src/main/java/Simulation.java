@@ -13,6 +13,9 @@ public class Simulation {
         this.crossRoad = new CrossRoad();
     }
     public void run(){
+        for (CommandAction action: actions){
+            action.applyAction();
+        }
         this.crossRoad.getTopPriorityRoad();
     }
 }
