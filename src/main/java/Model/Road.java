@@ -2,6 +2,7 @@ package Model;
 import Enum.RoadDirection;
 import java.util.ArrayList;
 import java.util.List;
+import Exception.EmptyRoadException;
 
 public class Road {
     private final RoadDirection direction;
@@ -20,8 +21,13 @@ public class Road {
         this.vehicles.add(vehicle);
     }
 
-    public void moveVehicle(){
-        this.vehicles.removeFirst();
+    public void moveVehicle() throws EmptyRoadException {
+        try {
+            this.vehicles.removeFirst();
+        }
+        catch (Exception e){
+            throw new EmptyRoadException("Try get vehicle from empty road");
+        }
     }
 
     @Override

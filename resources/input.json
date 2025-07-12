@@ -10,7 +10,7 @@
 
       "startRoad": "south",
 
-      "endRoad": "south"
+      "endRoad": "north"
 
     },
 
@@ -43,7 +43,17 @@
       "type": "step"
 
     },
+    {
 
+      "type": "step"
+
+    },
+
+    {
+
+      "type": "step"
+
+    },
     {
 
       "type": "step"
