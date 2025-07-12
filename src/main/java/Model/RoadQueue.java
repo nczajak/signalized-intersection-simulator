@@ -1,18 +1,19 @@
 package Model;
+import java.util.Comparator;
 import java.util.List;
-import java.util.ArrayList;
 
 public class RoadQueue {
-    List<Vehicle> queue;
+    List<Road> roads;
 
-    public RoadQueue(){
-        this.queue = new ArrayList<>();
+    public RoadQueue(List<Road> roads){
+        this.roads = roads;
     }
 
-    public int getSize(){
-        return queue.size();
+    private void sort(){
+        this.roads.sort(Comparator.comparingInt(Road::getVehiclesAmount).reversed());
     }
 
-
-
+    public Road getTopPriorityRoad(){
+        return this.roads.getFirst();
+    }
 }

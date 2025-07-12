@@ -3,10 +3,10 @@ import Enum.RoadDirection;
 
 public class Road {
     private final RoadDirection direction;
-    private RoadQueue vehicles;
+    private VehicleQueue vehicles;
 
     public Road(RoadDirection direction){
-        this.vehicles = new RoadQueue();
+        this.vehicles = new VehicleQueue();
         this.direction = direction;
     }
 
@@ -15,6 +15,5 @@ public class Road {
     }
 
     public void addVehicle(Vehicle vehicle){
-
     }
 }

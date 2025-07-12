@@ -1,15 +1,17 @@
 package Model;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.List;
-import java.util.Comparator;
 import Enum.RoadDirection;
+import java.util.List;
+
 
 public class CrossRoad {
     private final Map<RoadDirection,Road> roads = new HashMap<>();
+    private final RoadQueue roadQueue;
 
     public CrossRoad(){
         createRoads();
+        this.roadQueue = new RoadQueue(getRoads());
     }
 
     private void createRoads(){
@@ -24,8 +26,12 @@ public class CrossRoad {
         road.addVehicle(vehicle);
     }
 
-    public Road getRoadByDirection(RoadDirection direction){
+    private Road getRoadByDirection(RoadDirection direction){
        return this.roads.get(direction);
+    }
+
+    private List<Road> getRoads(){
+        return (List<Road>) this.roads.values();
     }
 
     public Road getTopPriorityRoad(){
@@ -33,6 +39,7 @@ public class CrossRoad {
     }
 
     private Road getRoadWithLongestQueue(){
+
     }
 
 //    dodac sortowanie po czasie oczekiwania i rzucanie wyjatku w getRoadWithLongestQueue;
