@@ -1,19 +1,22 @@
 package Model;
 import Enum.RoadDirection;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Road {
     private final RoadDirection direction;
-    private VehicleQueue vehicles;
+    private List<Vehicle> vehicles;
 
     public Road(RoadDirection direction){
-        this.vehicles = new VehicleQueue();
+        this.vehicles = new ArrayList<>();
         this.direction = direction;
     }
 
     public int getVehiclesAmount(){
-        return this.vehicles.getSize();
+        return this.vehicles.size();
     }
 
     public void addVehicle(Vehicle vehicle){
+        this.vehicles.add(vehicle);
     }
 }

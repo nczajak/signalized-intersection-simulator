@@ -13,7 +13,7 @@ public class RoadQueue {
         this.roads.sort(Comparator.comparingInt(Road::getVehiclesAmount).reversed());
     }
 
-    public Road getTopPriorityRoad(){
+    public Road getRoadWithLongestQueue(){
         return this.roads.getFirst();
     }
 }

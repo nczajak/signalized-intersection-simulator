@@ -34,12 +34,8 @@ public class CrossRoad {
         return (List<Road>) this.roads.values();
     }
 
-    public Road getTopPriorityRoad(){
-        return getRoadWithLongestQueue();
-    }
-
-    private Road getRoadWithLongestQueue(){
-
+    private Road getTopPriorityRoad(){
+        return this.roadQueue.getRoadWithLongestQueue();
     }
 
 //    dodac sortowanie po czasie oczekiwania i rzucanie wyjatku w getRoadWithLongestQueue;
