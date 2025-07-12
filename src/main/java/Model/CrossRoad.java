@@ -3,6 +3,8 @@ import java.util.HashMap;
 import java.util.Map;
 import Enum.RoadDirection;
 import java.util.List;
+import java.util.ArrayList;
+
 
 
 public class CrossRoad {
@@ -31,12 +33,11 @@ public class CrossRoad {
     }
 
     private List<Road> getRoads(){
-        return (List<Road>) this.roads.values();
+        return new ArrayList<>(this.roads.values());
     }
 
-    private Road getTopPriorityRoad(){
+    public Road getTopPriorityRoad(){
         return this.roadQueue.getRoadWithLongestQueue();
     }
 
-//    dodac sortowanie po czasie oczekiwania i rzucanie wyjatku w getRoadWithLongestQueue;
 }

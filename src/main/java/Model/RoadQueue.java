@@ -14,6 +14,7 @@ public class RoadQueue {
     }
 
     public Road getRoadWithLongestQueue(){
+        this.sort();
         return this.roads.getFirst();
     }
 }

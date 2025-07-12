@@ -1,5 +1,7 @@
 package Enum;
 
+import Exception.SameRoadDirectionException;
+
 public enum MoveDirection {
     NORTH_EAST,
     NORTH_SOUTH,
@@ -18,8 +20,8 @@ public enum MoveDirection {
         String key = start.name() + "_" + end.name();
         try {
             return MoveDirection.valueOf(key);
-        } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("Invalid direction combination: " + key);
+        } catch (Exception e) {
+            throw new SameRoadDirectionException("Invalid direction combination: " + key);
         }
     }
 }

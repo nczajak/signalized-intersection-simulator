@@ -3,7 +3,7 @@ import Enum.MoveDirection;
 import Enum.RoadDirection;
 
 public class Vehicle {
-    private final String vehicleId;
+    public final String vehicleId;
     private final RoadDirection startRoadDirection;
     private final RoadDirection endRoadDirection;
     private final MoveDirection direction;
@@ -15,7 +15,16 @@ public class Vehicle {
         this.direction = MoveDirection.parse(this.startRoadDirection,this.endRoadDirection);
     }
 
+    public MoveDirection getDirection(){
+        return this.direction;
+    }
+
     public RoadDirection getStartRoadDirection(){
         return this.startRoadDirection;
+    }
+
+    @Override
+    public String toString(){
+        return this.vehicleId;
     }
 }

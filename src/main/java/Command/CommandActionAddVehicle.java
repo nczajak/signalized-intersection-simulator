@@ -15,6 +15,7 @@ public class CommandActionAddVehicle implements CommandAction {
     public void applyAction(CrossRoad crossRoad) {
         Vehicle vehicle = createVehicle(command);
         crossRoad.putVehicleOnValidRoad(vehicle);
+
     }
 
     private Vehicle createVehicle(Command command){

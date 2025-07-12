@@ -1,11 +1,13 @@
 package Command;
 
 import Model.CrossRoad;
+import Model.Road;
 
 public class CommandActionStep implements CommandAction {
 
     @Override
     public void applyAction(CrossRoad crossRoad) {
-        System.out.println("step");
+        Road road = crossRoad.getTopPriorityRoad();
+        road.moveVehicle();
     }
 }

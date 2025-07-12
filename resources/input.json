@@ -10,6 +10,18 @@
 
       "startRoad": "south",
 
+      "endRoad": "south"
+
+    },
+
+    {
+
+      "type": "addVehicle",
+
+      "vehicleId": "vehicle11",
+
+      "startRoad": "south",
+
       "endRoad": "north"
 
     },

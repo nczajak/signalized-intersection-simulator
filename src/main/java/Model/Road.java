@@ -19,4 +19,14 @@ public class Road {
     public void addVehicle(Vehicle vehicle){
         this.vehicles.add(vehicle);
     }
+
+    public void moveVehicle(){
+        this.vehicles.removeFirst();
+    }
+
+    @Override
+    public String toString(){
+        return this.direction.toString();
+    }
+
 }
