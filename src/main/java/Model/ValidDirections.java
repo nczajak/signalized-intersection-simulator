@@ -26,3 +26,4 @@ public class ValidDirections {
             case WEST_SOUTH -> Set.of(MoveDirection.NORTH_WEST,MoveDirection.EAST_NORTH,MoveDirection.EAST_WEST,MoveDirection.SOUTH_EAST,MoveDirection.SOUTH_NORTH,MoveDirection.SOUTH_WEST);
         };
 }
+}

@@ -6,10 +6,10 @@ import Exception.EmptyRoadException;
 
 public class Road {
     public final RoadDirection direction;
-    private List<Vehicle> vehicles;
+    private final List<Vehicle> vehicles = new ArrayList<>();
+    private final TrafficLight trafficLight = new TrafficLight();
 
     public Road(RoadDirection direction){
-        this.vehicles = new ArrayList<>();
         this.direction = direction;
     }
 

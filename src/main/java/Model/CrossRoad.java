@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class CrossRoad {
     private final Map<RoadDirection,Road> roads = new HashMap<>();
     private final RoadQueue roadQueue;
+    private final MoveValidator moveValidator = new MoveValidator();
 
     public CrossRoad(){
         createRoads();
