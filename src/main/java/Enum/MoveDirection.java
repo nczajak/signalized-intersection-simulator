@@ -2,6 +2,7 @@ package Enum;
 
 import Exception.SameRoadDirectionException;
 
+
 public enum MoveDirection {
     NORTH_EAST,
     NORTH_SOUTH,
@@ -24,5 +25,6 @@ public enum MoveDirection {
             throw new SameRoadDirectionException("Invalid direction combination: " + key);
         }
     }
+
 }
 

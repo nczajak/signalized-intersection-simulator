@@ -40,4 +40,10 @@ public class CrossRoad {
         return this.roadQueue.getRoadWithLongestQueue();
     }
 
+    public void report(){
+        for (Road road: roads.values()){
+            System.out.println(road.direction+" : " +road.getVehiclesAmount());
+        }
+        System.out.println("------------------");
+    }
 }

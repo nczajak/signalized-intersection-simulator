@@ -5,7 +5,7 @@ import java.util.List;
 import Exception.EmptyRoadException;
 
 public class Road {
-    private final RoadDirection direction;
+    public final RoadDirection direction;
     private List<Vehicle> vehicles;
 
     public Road(RoadDirection direction){

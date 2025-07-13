@@ -14,9 +14,8 @@ public class Simulation {
     }
     public void run(){
         for (CommandAction action: actions){
-            System.out.println("xd");
-
             action.applyAction(crossRoad);
+            crossRoad.report();
         }
     }
 }

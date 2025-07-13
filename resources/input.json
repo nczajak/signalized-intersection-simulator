@@ -14,17 +14,6 @@
 
     },
 
-    {
-
-      "type": "addVehicle",
-
-      "vehicleId": "vehicle11",
-
-      "startRoad": "south",
-
-      "endRoad": "north"
-
-    },
 
     {
 
@@ -43,22 +32,13 @@
       "type": "step"
 
     },
-    {
-
-      "type": "step"
-
-    },
 
     {
 
       "type": "step"
 
     },
-    {
 
-      "type": "step"
-
-    },
 
     {
 
