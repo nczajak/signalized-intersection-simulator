@@ -1,8 +1,6 @@
 package Enum;
 
 import Exception.SameRoadDirectionException;
-import Model.CollisionMap;
-
 
 public enum MoveDirection {
     NORTH_EAST,
@@ -17,13 +15,6 @@ public enum MoveDirection {
     WEST_NORTH,
     WEST_EAST,
     WEST_SOUTH;
-
-
-    private final CollisionMap collisionMap;
-
-    MoveDirection(){
-        this.collisionMap = new CollisionMap(this);
-    }
 
     public static MoveDirection parse(RoadDirection start, RoadDirection end) {
         String key = start.name() + "_" + end.name();
