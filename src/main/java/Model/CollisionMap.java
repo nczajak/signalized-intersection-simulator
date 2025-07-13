@@ -5,10 +5,9 @@ import java.util.Map;
 import Enum.MoveDirection;
 
 public class CollisionMap {
-    private final Map<MoveDirection,ValidDirections> map;
+    private final Map<MoveDirection,ValidDirections> map = new HashMap<>();
 
     public CollisionMap(){
-        this.map = new HashMap<>();
         createRules();
     }
 

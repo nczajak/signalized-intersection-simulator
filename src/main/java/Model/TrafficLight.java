@@ -2,10 +2,9 @@ package Model;
 import Enum.Colour;
 
 public class TrafficLight {
-    private Colour colour;
+    private Colour colour = Colour.RED;
 
     public TrafficLight(){
-        this.colour = Colour.RED;
     }
 
     public void setColour(Colour colour) {
