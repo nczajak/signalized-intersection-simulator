@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class CrossRoad {
     private final Map<RoadDirection,Road> roads = new HashMap<>();
     private final RoadQueue roadQueue;
-    private final MoveValidator moveValidator = new MoveValidator();
 
     public CrossRoad(){
         createRoads();
@@ -37,9 +36,15 @@ public class CrossRoad {
         return new ArrayList<>(this.roads.values());
     }
 
-    public Road getTopPriorityRoad(){
-        return this.roadQueue.getRoadWithLongestQueue();
+    public void moveVehicles(){
+        List<Road> sortedRoads = this.roadQueue.getSortedRoads();
+        for (Road road: sortedRoads){
+            if(road.isGreenLight()){
+                road.moveVehicle();
+            }
+        }
     }
+
 
     public void report(){
         for (Road road: roads.values()){

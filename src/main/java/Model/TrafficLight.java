@@ -7,6 +7,10 @@ public class TrafficLight {
     public TrafficLight(){
     }
 
+    public Colour getColour(){
+        return this.colour;
+    }
+
     public void setColour(Colour colour) {
         this.colour = colour;
     }

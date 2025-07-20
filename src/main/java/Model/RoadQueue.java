@@ -3,7 +3,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public class RoadQueue {
-    List<Road> roads;
+    private final List<Road> roads;
 
     public RoadQueue(List<Road> roads){
         this.roads = roads;
@@ -13,8 +13,14 @@ public class RoadQueue {
         this.roads.sort(Comparator.comparingInt(Road::getVehiclesAmount).reversed());
     }
 
-    public Road getRoadWithLongestQueue(){
+    public List<Road> getSortedRoads(){
         this.sort();
-        return this.roads.getFirst();
+        return roads;
     }
+//
+//    public Road getRoadWithLongestQueue(){
+//        this.sort();
+//        return this.roads.getFirst();
+//    }
+
 }

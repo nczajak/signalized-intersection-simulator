@@ -1,5 +1,6 @@
 package Model;
 import Enum.RoadDirection;
+import Enum.Colour;
 import java.util.ArrayList;
 import java.util.List;
 import Exception.EmptyRoadException;
@@ -11,6 +12,10 @@ public class Road {
 
     public Road(RoadDirection direction){
         this.direction = direction;
+    }
+
+    public boolean isGreenLight(){
+        return trafficLight.getColour() == Colour.GREEN;
     }
 
     public int getVehiclesAmount(){
