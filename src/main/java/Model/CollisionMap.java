@@ -21,7 +21,6 @@ public class CollisionMap {
         return false;
     }
 
-
     private void createRules(){
         for(MoveDirection direction: MoveDirection.values()){
             map.put(direction, new ValidDirections(direction));

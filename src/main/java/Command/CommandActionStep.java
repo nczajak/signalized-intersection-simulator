@@ -8,6 +8,7 @@ public class CommandActionStep implements CommandAction {
     @Override
     public void applyAction(CrossRoad crossRoad) {
         try {
+            crossRoad.setGreenLights();
             crossRoad.moveVehicles();
         }
         catch (EmptyRoadException e){

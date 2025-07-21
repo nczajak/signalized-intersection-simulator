@@ -1,15 +1,17 @@
 package Model;
 import java.util.HashMap;
 import java.util.Map;
+
+import Enum.Colour;
 import Enum.RoadDirection;
 import java.util.List;
 import java.util.ArrayList;
 
 
-
 public class CrossRoad {
     private final Map<RoadDirection,Road> roads = new HashMap<>();
     private final RoadQueue roadQueue;
+    private final MoveValidator validator = new MoveValidator();
 
     public CrossRoad(){
         createRoads();
@@ -27,7 +29,14 @@ public class CrossRoad {
     }
 
 
-    public void setGreenLights(){ //swiatła są ustawiane na drogach
+    public void setGreenLights(){
+        for(Road road: roadQueue.getSortedRoads()){
+            if(road.getVehiclesAmount()>0){
+                if(validator.isValidDirection(road.getFirstVehicleDirection())){
+                    road.setTrafficLight(Colour.GREEN);
+                }
+            }
+        }
     }
 
     public void putVehicleOnValidRoad(Vehicle vehicle){

@@ -16,8 +16,11 @@ public class Road {
     }
 
     public MoveDirection getFirstVehicleDirection(){
-        System.out.println(direction+" "+getVehiclesAmount());
         return this.vehicles.getFirst().getDirection();
+    }
+
+    public void setTrafficLight(Colour colour){
+        this.trafficLight.setColour(colour);
     }
 
     public RoadDirection getDirection(){
