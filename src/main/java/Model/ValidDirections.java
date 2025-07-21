@@ -10,6 +10,10 @@ public class ValidDirections {
         this.validDirections = createCollisionSet(direction);
     }
 
+    public boolean containsElement(MoveDirection direction){
+        return validDirections.contains(direction);
+    }
+
     private Set<MoveDirection> createCollisionSet(MoveDirection direction){
         return switch (direction){
             case NORTH_EAST -> Set.of(MoveDirection.EAST_NORTH);

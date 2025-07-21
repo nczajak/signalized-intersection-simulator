@@ -22,34 +22,37 @@ public class CrossRoad {
            roads.put(direction,road);
         }
     }
+    private List<Road> getRoads(){
+        return new ArrayList<>(this.roads.values());
+    }
+
+
+    public void setGreenLights(){ //swiatła są ustawiane na drogach
+    }
 
     public void putVehicleOnValidRoad(Vehicle vehicle){
         Road road = getRoadByDirection(vehicle.getStartRoadDirection());
         road.addVehicle(vehicle);
     }
 
-    private Road getRoadByDirection(RoadDirection direction){
-       return this.roads.get(direction);
-    }
-
-    private List<Road> getRoads(){
-        return new ArrayList<>(this.roads.values());
-    }
-
     public void moveVehicles(){
-        List<Road> sortedRoads = this.roadQueue.getSortedRoads();
-        for (Road road: sortedRoads){
+        for (Road road: this.roads.values()){
             if(road.isGreenLight()){
                 road.moveVehicle();
             }
         }
     }
 
-
     public void report(){
         for (Road road: roads.values()){
-            System.out.println(road.direction+" : " +road.getVehiclesAmount());
+            System.out.println(road.getDirection()+" : " +road.getVehiclesAmount());
         }
         System.out.println("------------------");
     }
+
+
+    private Road getRoadByDirection(RoadDirection direction){
+        return this.roads.get(direction);
+    }
+
 }
