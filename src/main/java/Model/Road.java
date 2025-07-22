@@ -5,6 +5,7 @@ import Enum.Colour;
 import java.util.ArrayList;
 import java.util.List;
 import Exception.EmptyRoadException;
+import java.util.NoSuchElementException;
 
 public class Road {
     private final RoadDirection direction;
@@ -17,6 +18,16 @@ public class Road {
 
     public MoveDirection getFirstVehicleDirection(){
         return this.vehicles.getFirst().getDirection();
+    }
+
+    public int getPriority(){
+        try{
+            return this.getVehiclesAmount() + this.vehicles.getFirst().getWaitingTime();
+        }
+        catch (NoSuchElementException e){
+            System.err.println(this+" : "+this.getVehiclesAmount());
+            return 0;
+        }
     }
 
     public void setTrafficLight(Colour colour){

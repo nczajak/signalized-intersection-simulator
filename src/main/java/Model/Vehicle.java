@@ -7,12 +7,21 @@ public class Vehicle {
     private final RoadDirection startRoadDirection;
     private final RoadDirection endRoadDirection;
     private final MoveDirection direction;
+    private int waitingTime = 0;
 
     public Vehicle(String vehicleId, RoadDirection startRoadDirection, RoadDirection endRoadDirection){
         this.vehicleId = vehicleId;
         this.startRoadDirection = startRoadDirection;
         this.endRoadDirection = endRoadDirection;
         this.direction = MoveDirection.parse(this.startRoadDirection,this.endRoadDirection);
+    }
+
+    public int getWaitingTime(){
+        return this.waitingTime;
+    }
+
+    public void increaseWaitingTime(){
+        this.waitingTime ++;
     }
 
     public MoveDirection getDirection(){

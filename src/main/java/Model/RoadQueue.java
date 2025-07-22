@@ -10,17 +10,12 @@ public class RoadQueue {
     }
 
     private void sort(){
-        this.roads.sort(Comparator.comparingInt(Road::getVehiclesAmount).reversed());
+        this.roads.sort(Comparator.comparingInt(Road::getPriority).reversed());
     }
 
     public List<Road> getSortedRoads(){
         this.sort();
         return roads;
     }
-//
-//    public Road getRoadWithLongestQueue(){
-//        this.sort();
-//        return this.roads.getFirst();
-//    }
 
 }
