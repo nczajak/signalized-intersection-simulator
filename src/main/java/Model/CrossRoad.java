@@ -11,7 +11,6 @@ import java.util.ArrayList;
 public class CrossRoad {
     private final Map<RoadDirection,Road> roads = new HashMap<>();
     private final RoadQueue roadQueue;
-    private final MoveValidator validator = new MoveValidator();
 
     public CrossRoad(){
         createRoads();
@@ -29,12 +28,19 @@ public class CrossRoad {
     }
 
 
-    public void setGreenLights(){
+    public void setLights(){
+        MoveValidator moveValidator = new MoveValidator();
         for(Road road: roadQueue.getSortedRoads()){
             if(road.getVehiclesAmount()>0){
-                if(validator.isValidDirection(road.getFirstVehicleDirection())){
+                if(moveValidator.isValidDirection(road.getFirstVehicleDirection())){
                     road.setTrafficLight(Colour.GREEN);
                 }
+                else{
+                    road.setTrafficLight(Colour.RED);
+                }
+            }
+            else{
+                road.setTrafficLight(Colour.RED);
             }
         }
     }

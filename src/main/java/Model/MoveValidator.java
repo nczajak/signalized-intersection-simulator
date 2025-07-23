@@ -7,17 +7,15 @@ import java.util.List;
 
 public class MoveValidator {
     private final CollisionMap map = new CollisionMap();
-    private final List<Road> validRoads = new ArrayList<>();
+    private final List<MoveDirection> validDirections = new ArrayList<>();
 
 
     public boolean isValidDirection(MoveDirection newDirection){
-        List<MoveDirection> validDirections = new ArrayList<>();
-        for (Road road: validRoads){
-            if(road.getVehiclesAmount()>0){
-                validDirections.add(road.getFirstVehicleDirection());
-            }
+        if(!map.collidesWith(validDirections,newDirection)){
+            validDirections.add(newDirection);
+            return true;
         }
-        return !map.collidesWith(validDirections,newDirection);
+        return false;
     }
 
 
