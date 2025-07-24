@@ -27,22 +27,8 @@ public class CrossRoad {
         return new ArrayList<>(this.roads.values());
     }
 
-
-    public void setLights(){
-        MoveValidator moveValidator = new MoveValidator();
-        for(Road road: roadQueue.getSortedRoads()){
-            if(road.getVehiclesAmount()>0){
-                if(moveValidator.isValidDirection(road.getFirstVehicleDirection())){
-                    road.setTrafficLight(Colour.GREEN);
-                }
-                else{
-                    road.setTrafficLight(Colour.RED);
-                }
-            }
-            else{
-                road.setTrafficLight(Colour.RED);
-            }
-        }
+    public List<Road> getRoadsSortedByPriority(){
+        return roadQueue.getSortedRoads();
     }
 
     public void putVehicleOnValidRoad(Vehicle vehicle){
