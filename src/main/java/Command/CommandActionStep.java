@@ -10,6 +10,7 @@ public class CommandActionStep implements CommandAction {
     public void applyAction(CrossRoad crossRoad) {
         MoveValidator validator = new MoveValidator();
         validator.setLights(crossRoad);
+
         try {
             crossRoad.moveVehicles();
         }

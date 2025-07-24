@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import Exception.EmptyRoadException;
 
+
 public class Road {
     private final RoadDirection direction;
     private final List<Vehicle> vehicles = new ArrayList<>();
@@ -15,15 +16,30 @@ public class Road {
         this.direction = direction;
     }
 
+    public RoadDirection getDirection(){
+        return this.direction;
+    }
+
+    public int getVehiclesAmount(){
+        return this.vehicles.size();
+    }
+
+    public void updateVehiclesWaitingTime(){
+        for(Vehicle vehicle: this.vehicles){
+            vehicle.increaseWaitingTime();
+        }
+    }
+
+
     public MoveDirection getFirstVehicleDirection(){
         return this.vehicles.getFirst().getDirection();
     }
 
     public int getPriority(){
-        if(this.getVehiclesAmount()>0){
-            return this.getVehiclesAmount()+this.vehicles.getFirst().getWaitingTime();
+        try {
+            return this.getVehiclesAmount()*this.vehicles.getFirst().getWaitingTime();
         }
-        else{
+        catch (Exception e){
             return 0;
         }
     }
@@ -32,16 +48,9 @@ public class Road {
         this.trafficLight.setColour(colour);
     }
 
-    public RoadDirection getDirection(){
-        return this.direction;
-    }
 
     public boolean isGreenLight(){
         return trafficLight.getColour() == Colour.GREEN;
-    }
-
-    public int getVehiclesAmount(){
-        return this.vehicles.size();
     }
 
     public void addVehicle(Vehicle vehicle){

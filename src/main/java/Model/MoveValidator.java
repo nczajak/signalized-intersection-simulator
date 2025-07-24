@@ -18,8 +18,6 @@ public class MoveValidator {
         }
     }
 
-
-
     private boolean isValidDirection(MoveDirection newDirection){
         if(!map.collidesWith(validDirections,newDirection)){
             validDirections.add(newDirection);
@@ -27,7 +25,5 @@ public class MoveValidator {
         }
         return false;
     }
-
-
 }
 

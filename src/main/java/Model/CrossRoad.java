@@ -2,7 +2,6 @@ package Model;
 import java.util.HashMap;
 import java.util.Map;
 
-import Enum.Colour;
 import Enum.RoadDirection;
 import java.util.List;
 import java.util.ArrayList;
@@ -23,6 +22,7 @@ public class CrossRoad {
            roads.put(direction,road);
         }
     }
+
     private List<Road> getRoads(){
         return new ArrayList<>(this.roads.values());
     }
@@ -32,8 +32,13 @@ public class CrossRoad {
     }
 
     public void putVehicleOnValidRoad(Vehicle vehicle){
-        Road road = getRoadByDirection(vehicle.getStartRoadDirection());
+        RoadDirection direction = vehicle.getStartRoadDirection();
+        Road road = getRoadByDirection(direction);
         road.addVehicle(vehicle);
+    }
+
+    private Road getRoadByDirection(RoadDirection direction){
+        return this.roads.get(direction);
     }
 
     public void moveVehicles(){
@@ -50,10 +55,4 @@ public class CrossRoad {
         }
         System.out.println("------------------");
     }
-
-
-    private Road getRoadByDirection(RoadDirection direction){
-        return this.roads.get(direction);
-    }
-
 }

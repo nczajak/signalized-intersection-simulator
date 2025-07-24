@@ -10,6 +10,9 @@ public class RoadQueue {
     }
 
     private void sort(){
+        for(Road road: roads){
+            road.updateVehiclesWaitingTime();
+        }
         this.roads.sort(Comparator.comparingInt(Road::getPriority).reversed());
     }
 
@@ -17,5 +20,6 @@ public class RoadQueue {
         this.sort();
         return roads;
     }
+
 
 }
