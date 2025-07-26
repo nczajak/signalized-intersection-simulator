@@ -1,10 +1,10 @@
 package test;
 
-import Model.Road;
-import Model.Vehicle;
+import org.example.Model.Road;
+import org.example.Model.Vehicle;
 import org.junit.jupiter.api.Test;
-import Enum.RoadDirection;
-import Exception.EmptyRoadException;
+import org.example.Enum.RoadDirection;
+import org.example.Exception.EmptyRoadException;
 
 import static org.junit.jupiter.api.Assertions.*;
 

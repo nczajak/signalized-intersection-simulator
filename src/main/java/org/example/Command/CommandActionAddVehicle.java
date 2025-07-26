@@ -1,8 +1,8 @@
-package Command;
+package org.example.Command;
 
-import Enum.RoadDirection;
-import Model.CrossRoad;
-import Model.Vehicle;
+import org.example.Enum.RoadDirection;
+import org.example.Model.CrossRoad;
+import org.example.Model.Vehicle;
 
 public class CommandActionAddVehicle implements CommandAction {
     private final Command command;

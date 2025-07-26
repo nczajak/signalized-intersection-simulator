@@ -1,10 +1,10 @@
-package Model;
-import Enum.MoveDirection;
-import Enum.RoadDirection;
-import Enum.Colour;
+package org.example.Model;
+import org.example.Enum.MoveDirection;
+import org.example.Enum.RoadDirection;
+import org.example.Enum.Colour;
 import java.util.ArrayList;
 import java.util.List;
-import Exception.EmptyRoadException;
+import org.example.Exception.EmptyRoadException;
 
 
 public class Road {

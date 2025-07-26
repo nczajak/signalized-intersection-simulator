@@ -2,11 +2,11 @@ package test;
 
 import java.util.ArrayList;
 import java.util.List;
-import Model.Road;
-import Model.RoadQueue;
-import Model.Vehicle;
+import org.example.Model.Road;
+import org.example.Model.RoadQueue;
+import org.example.Model.Vehicle;
 import org.junit.jupiter.api.Test;
-import Enum.RoadDirection;
+import org.example.Enum.RoadDirection;
 
 import static org.junit.jupiter.api.Assertions.*;
 

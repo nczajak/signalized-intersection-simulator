@@ -1,4 +1,4 @@
-package Command;
+package org.example.Command;
 
 public class Command {
     public String type;

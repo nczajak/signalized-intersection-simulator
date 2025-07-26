@@ -1,6 +1,6 @@
-package Parser;
+package org.example.Parser;
 
-import Command.CommandList;
+import org.example.Command.CommandList;
 import com.google.gson.Gson;
 
 import java.io.IOException;

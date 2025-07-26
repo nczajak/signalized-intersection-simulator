@@ -1,13 +1,15 @@
-import Command.CommandAction;
-import Command.CommandList;
-import Parser.CommandActionParser;
-import Parser.CommandJsonParser;
+package org.example;
+
+import org.example.Command.CommandAction;
+import org.example.Command.CommandList;
+import org.example.Parser.CommandActionParser;
+import org.example.Parser.CommandJsonParser;
 import java.io.IOException;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String inputFile = "./resources/input.json";
+        String inputFile = "./src/main/resources/input.json";
         CommandJsonParser commandJsonParser = new CommandJsonParser();
         CommandList commandList = commandJsonParser.jsonParse(inputFile);
         CommandActionParser commandActionParser = new CommandActionParser();

@@ -1,6 +1,7 @@
+package org.example;
 
-import Command.CommandAction;
-import Model.CrossRoad;
+import org.example.Command.CommandAction;
+import org.example.Model.CrossRoad;
 
 import java.util.List;
 

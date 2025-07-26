@@ -1,6 +1,6 @@
-package Enum;
+package org.example.Enum;
 
-import Exception.SameRoadDirectionException;
+import org.example.Exception.SameRoadDirectionException;
 
 public enum MoveDirection {
     NORTH_EAST,

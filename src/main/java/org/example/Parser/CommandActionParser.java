@@ -1,11 +1,11 @@
-package Parser;
+package org.example.Parser;
 
-import Command.Command;
-import Command.CommandAction;
-import Command.CommandActionAddVehicle;
-import Command.CommandActionStep;
-import Command.CommandList;
-import Exception.InvalidCommandTypeException;
+import org.example.Command.Command;
+import org.example.Command.CommandAction;
+import org.example.Command.CommandActionAddVehicle;
+import org.example.Command.CommandActionStep;
+import org.example.Command.CommandList;
+import org.example.Exception.InvalidCommandTypeException;
 
 import java.util.ArrayList;
 import java.util.List;

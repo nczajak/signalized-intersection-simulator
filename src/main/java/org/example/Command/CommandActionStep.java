@@ -1,8 +1,8 @@
-package Command;
+package org.example.Command;
 
-import Exception.EmptyRoadException;
-import Model.CrossRoad;
-import Model.MoveValidator;
+import org.example.Exception.EmptyRoadException;
+import org.example.Model.CrossRoad;
+import org.example.Model.MoveValidator;
 
 public class CommandActionStep implements CommandAction {
 

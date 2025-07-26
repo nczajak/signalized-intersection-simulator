@@ -1,6 +1,6 @@
-package Model;
-import Enum.MoveDirection;
-import Enum.RoadDirection;
+package org.example.Model;
+import org.example.Enum.MoveDirection;
+import org.example.Enum.RoadDirection;
 
 public class Vehicle {
     public final String vehicleId;

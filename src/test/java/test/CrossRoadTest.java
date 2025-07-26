@@ -1,9 +1,9 @@
 package test;
 
-import Model.CrossRoad;
-import Model.Vehicle;
+import org.example.Model.CrossRoad;
+import org.example.Model.Vehicle;
 import org.junit.jupiter.api.Test;
-import Enum.RoadDirection;
+import org.example.Enum.RoadDirection;
 
 import static org.junit.jupiter.api.Assertions.*;
 

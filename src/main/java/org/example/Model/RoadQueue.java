@@ -1,4 +1,4 @@
-package Model;
+package org.example.Model;
 import java.util.Comparator;
 import java.util.List;
 

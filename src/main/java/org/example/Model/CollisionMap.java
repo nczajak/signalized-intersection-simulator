@@ -1,9 +1,9 @@
-package Model;
+package org.example.Model;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
-import Enum.MoveDirection;
+import org.example.Enum.MoveDirection;
 
 public class CollisionMap {
     private final Map<MoveDirection,ValidDirections> map = new HashMap<>();

@@ -1,8 +1,8 @@
-package Model;
+package org.example.Model;
 import java.util.HashMap;
 import java.util.Map;
 
-import Enum.RoadDirection;
+import org.example.Enum.RoadDirection;
 import java.util.List;
 import java.util.ArrayList;
 

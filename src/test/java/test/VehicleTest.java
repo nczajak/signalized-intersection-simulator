@@ -1,10 +1,10 @@
 package test;
 
-import Model.Vehicle;
+import org.example.Model.Vehicle;
 import org.junit.jupiter.api.Test;
-import Enum.RoadDirection;
-import Enum.MoveDirection;
-import Exception.SameRoadDirectionException;
+import org.example.Enum.RoadDirection;
+import org.example.Enum.MoveDirection;
+import org.example.Exception.SameRoadDirectionException;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,7 +1,7 @@
-package Model;
+package org.example.Model;
 
-import Enum.Colour;
-import Enum.MoveDirection;
+import org.example.Enum.Colour;
+import org.example.Enum.MoveDirection;
 import java.util.ArrayList;
 import java.util.List;
 

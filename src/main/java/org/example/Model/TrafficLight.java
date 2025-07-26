@@ -1,5 +1,5 @@
-package Model;
-import Enum.Colour;
+package org.example.Model;
+import org.example.Enum.Colour;
 
 public class TrafficLight {
     private Colour colour = Colour.RED;

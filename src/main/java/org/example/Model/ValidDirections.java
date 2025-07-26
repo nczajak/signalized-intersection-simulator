@@ -1,6 +1,6 @@
-package Model;
+package org.example.Model;
 
-import Enum.MoveDirection;
+import org.example.Enum.MoveDirection;
 import java.util.Set;
 
 public class ValidDirections {
