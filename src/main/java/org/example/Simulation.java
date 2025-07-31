@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static java.lang.Thread.sleep;
+
 @Service
 public class Simulation {
     private final ActionStorageService storageService;
@@ -16,11 +18,12 @@ public class Simulation {
         this.storageService = storageService;
     }
 
-    public void run(List<CommandAction> actions){
+    public void run(List<CommandAction> actions) throws InterruptedException {
         for (CommandAction action: actions){
             storageService.saveAction(action.toDto());
             action.applyAction(crossRoad);
             crossRoad.report();
+            sleep(3000);
         }
     }
 }

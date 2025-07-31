@@ -23,7 +23,7 @@ public class CommandActionStep implements CommandAction {
 
     public CommandActionStepDto toDto(){
         CommandActionStepDto commandActionStepDto = new CommandActionStepDto();
-        commandActionStepDto.setMessage("step");
+        commandActionStepDto.setType("step");
         return commandActionStepDto;
     }
 

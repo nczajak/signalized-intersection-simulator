@@ -33,6 +33,7 @@ public class CommandActionAddVehicle implements CommandAction {
         commandActionAddVehicleDto.setStartRoad(this.command.startRoad);
         commandActionAddVehicleDto.setEndRoad(this.command.startRoad);
         commandActionAddVehicleDto.setVehicleId(this.command.vehicleId);
+        commandActionAddVehicleDto.setType(this.command.type);
         return commandActionAddVehicleDto;
     }
 

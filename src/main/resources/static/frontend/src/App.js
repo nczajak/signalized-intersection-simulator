@@ -1,20 +1,30 @@
 import {useEffect, useState} from "react";
-import * as http from "node:http";
 
 function App() {
 
     const [actions,setActions] = useState([]);
 
     useEffect(()=>{
-        fetch("http://localhost:8080/actios")
-            .then(res=>res.text)
+        fetch("http://localhost:8080/actions")
+            .then(res=>res.json())
             .then(data=>setActions(data))
-    },[])
+    },)
+
     console.log(actions)
     return (
         <div>
-            <h2>to jest strona głowna</h2>
-
+            <div>
+                {(actions.length>0)&&(
+                    <div>
+                        {actions.map((action,id)=>(
+                            <div key={id}>
+                                <h1>{action.type}</h1>
+                            </div>)
+                        )}
+                    </div>
+                    )
+                }
+            </div>
         </div>
     );
 }
