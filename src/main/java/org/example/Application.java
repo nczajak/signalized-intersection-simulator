@@ -15,12 +15,14 @@ import java.util.List;
 public class Application {
     public static void main(String[] args) throws IOException {
 
-        ApplicationContext context = SpringApplication.run(Application.class, args);
+        SpringApplication.run(Application.class, args);
+
         String inputFile = "./src/main/resources/input.json";
         CommandJsonParser commandJsonParser = new CommandJsonParser();
         CommandList commandList = commandJsonParser.jsonParse(inputFile);
         CommandActionParser commandActionParser = new CommandActionParser();
         List<CommandAction> actions = commandActionParser.commandsParse(commandList);
+
         Simulation simulation = new Simulation(actions);
         simulation.run();
     }

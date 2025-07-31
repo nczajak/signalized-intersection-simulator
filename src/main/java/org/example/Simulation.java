@@ -2,9 +2,11 @@ package org.example;
 
 import org.example.Command.CommandAction;
 import org.example.Model.CrossRoad;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class Simulation {
     private final List<CommandAction> actions;
     private final CrossRoad crossRoad = new CrossRoad();;
