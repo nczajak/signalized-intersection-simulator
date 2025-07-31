@@ -11,6 +11,7 @@ public class CommandActionAddVehicle implements CommandAction {
         this.command = command;
     }
 
+
     @Override
     public void applyAction(CrossRoad crossRoad) {
         Vehicle vehicle = createVehicle(command);
@@ -18,10 +19,12 @@ public class CommandActionAddVehicle implements CommandAction {
 
     }
 
+
     private Vehicle createVehicle(Command command){
         RoadDirection startRoadDirection = RoadDirection.parse(command.startRoad);
         RoadDirection endRoadDirection = RoadDirection.parse(command.endRoad);
         String vehicleId = command.vehicleId;
         return new Vehicle(vehicleId,startRoadDirection,endRoadDirection);
     }
+
 }
