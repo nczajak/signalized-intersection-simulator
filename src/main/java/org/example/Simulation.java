@@ -18,7 +18,7 @@ public class Simulation {
 
     public void run(List<CommandAction> actions){
         for (CommandAction action: actions){
-            storageService.saveAction(action.toString());
+            storageService.saveAction(action.toDto());
             action.applyAction(crossRoad);
             crossRoad.report();
         }
