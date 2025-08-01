@@ -5,7 +5,7 @@ import org.example.Enum.Colour;
 import java.util.ArrayList;
 import java.util.List;
 import org.example.Exception.EmptyRoadException;
-
+import org.springframework.stereotype.Service;
 
 public class Road {
     private final RoadDirection direction;

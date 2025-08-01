@@ -11,12 +11,15 @@ import static java.lang.Thread.sleep;
 
 @Service
 public class Simulation {
-    private final ActionStorageService storageService;
-    private final CrossRoad crossRoad = new CrossRoad();
 
-    public Simulation(ActionStorageService storageService) {
+    private final ActionStorageService storageService;
+    private final CrossRoad crossRoad;
+
+    public Simulation(ActionStorageService storageService, CrossRoad crossRoad) {
         this.storageService = storageService;
+        this.crossRoad = crossRoad;
     }
+
 
     public void run(List<CommandAction> actions) throws InterruptedException {
         for (CommandAction action: actions){

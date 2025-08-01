@@ -3,10 +3,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.example.Enum.RoadDirection;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.ArrayList;
 
-
+@Service
 public class CrossRoad {
     private final Map<RoadDirection,Road> roads = new HashMap<>();
     private final RoadQueue roadQueue;
