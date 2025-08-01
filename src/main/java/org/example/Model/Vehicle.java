@@ -1,9 +1,10 @@
 package org.example.Model;
 import org.example.Enum.MoveDirection;
 import org.example.Enum.RoadDirection;
+import org.example.dtos.VehicleDto;
 
 public class Vehicle {
-    public final String vehicleId;
+    private final String vehicleId;
     private final RoadDirection startRoadDirection;
     private final RoadDirection endRoadDirection;
     private final MoveDirection direction;
@@ -30,6 +31,15 @@ public class Vehicle {
 
     public RoadDirection getStartRoadDirection(){
         return this.startRoadDirection;
+    }
+
+    public VehicleDto toDto(){
+        VehicleDto vehicleDto = new VehicleDto();
+        vehicleDto.setVehicleId(this.vehicleId);
+        vehicleDto.setWaitingTime(this.waitingTime);
+        vehicleDto.setEncRoad(this.endRoadDirection.name());
+
+        return vehicleDto;
     }
 
     @Override

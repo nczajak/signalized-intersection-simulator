@@ -5,6 +5,7 @@ import org.example.Enum.Colour;
 import java.util.ArrayList;
 import java.util.List;
 import org.example.Exception.EmptyRoadException;
+import org.example.dtos.VehicleDto;
 import org.springframework.stereotype.Service;
 
 public class Road {
@@ -64,6 +65,14 @@ public class Road {
         catch (Exception e){
             throw new EmptyRoadException("Try get vehicle from empty road");
         }
+    }
+
+    public List<VehicleDto> getVehiclesDto(){
+        List<VehicleDto> vehiclesDto = new ArrayList<>();
+        for(Vehicle vehicle: this.vehicles){
+           vehiclesDto.add(vehicle.toDto());
+        }
+        return vehiclesDto;
     }
 
     @Override

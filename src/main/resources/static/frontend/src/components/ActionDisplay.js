@@ -7,9 +7,8 @@ const ActionDisplay = ()=>{
         fetch("http://localhost:8080/actions")
             .then(res=>res.json())
             .then(data=>setActions(data))
-    },[])
+    },)
 
-    console.log(actions)
     return (
         <div>
             <div>

@@ -3,6 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.example.Enum.RoadDirection;
+import org.example.dtos.VehicleDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,6 +50,11 @@ public class CrossRoad {
                 road.moveVehicle();
             }
         }
+    }
+
+    public List<VehicleDto> getVehiclesDtoFromRoad(RoadDirection direction){
+        Road road = getRoadByDirection(direction);
+        return road.getVehiclesDto();
     }
 
     public void report(){
