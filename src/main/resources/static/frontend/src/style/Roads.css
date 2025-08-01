@@ -31,22 +31,80 @@
 
 .vertical {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2,50%);
 }
 
 .horizontal {
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: repeat(2,50%);
 }
 
 .grid {
     background-color: #282c34;
-    width: 700px;
-    height: 700px;
-    grid-template-columns: auto auto auto;
+    width: 810px;
+    height: 810px;
+    grid-template-columns: repeat(3,270px);
+    grid-template-rows: repeat(3, 270px);
     display: grid;
 }
 
 .road_element {
     border: solid 1px #95999b;
+    color: #61dafb;
+}
+
+
+.road_element_north {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+    border: solid 1px #95999b;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.road_element_east {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border: solid 1px #95999b;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;}
+
+.road_element_south {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: solid 1px #95999b;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+
+.road_element_west {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+    border: solid 1px #95999b;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+.vehicle {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    flex-shrink: 0;
 }
