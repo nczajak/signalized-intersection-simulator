@@ -56,6 +56,73 @@
 
       "type": "addVehicle",
 
+      "vehicleId": "vehicle2",
+
+      "startRoad": "north",
+
+      "endRoad": "south"
+
+    },
+    {
+
+      "type": "addVehicle",
+
+      "vehicleId": "vehicle2",
+
+      "startRoad": "north",
+
+      "endRoad": "south"
+
+    },
+    {
+
+      "type": "addVehicle",
+
+      "vehicleId": "vehicle2",
+
+      "startRoad": "north",
+
+      "endRoad": "south"
+
+    },
+    {
+
+      "type": "addVehicle",
+
+      "vehicleId": "vehicle2",
+
+      "startRoad": "north",
+
+      "endRoad": "south"
+
+    },
+    {
+
+      "type": "addVehicle",
+
+      "vehicleId": "vehicle2",
+
+      "startRoad": "north",
+
+      "endRoad": "south"
+
+    },
+    {
+
+      "type": "addVehicle",
+
+      "vehicleId": "vehicle2",
+
+      "startRoad": "north",
+
+      "endRoad": "south"
+
+    },
+
+    {
+
+      "type": "addVehicle",
+
       "vehicleId": "vehicle4",
 
       "startRoad": "west",
