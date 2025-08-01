@@ -37,7 +37,7 @@ public class Vehicle {
         VehicleDto vehicleDto = new VehicleDto();
         vehicleDto.setVehicleId(this.vehicleId);
         vehicleDto.setWaitingTime(this.waitingTime);
-        vehicleDto.setEncRoad(this.endRoadDirection.name());
+        vehicleDto.setEndRoad(this.endRoadDirection.name());
 
         return vehicleDto;
     }

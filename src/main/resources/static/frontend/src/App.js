@@ -3,20 +3,25 @@ import NorthRoad from "./components/NorthRoad"
 import SouthRoad from "./components/SouthRoad";
 import EastRoad from "./components/EastRoad";
 import WestRoad from "./components/WestRoad";
+import RoadTable from "./components/RoadTable";
+import CrossRoad from "./components/CrossRoad";
 
 function App() {
 
     return(
         <>
-            <ActionDisplay />
-            <div className="crossroad">
-                <div className="vertical_roads">
-                    <NorthRoad />
-                    <SouthRoad/>
+            <div className="tables">
+                <div>
+                    <ActionDisplay />
                 </div>
-                <div className="horizontal_roads">
-                    <EastRoad/>
-                    <WestRoad/>
+                <div>
+                    <CrossRoad/>
+                </div>
+                <div className="road_tables">
+                    <RoadTable direction="north"/>
+                    <RoadTable direction="east"/>
+                    <RoadTable direction="south"/>
+                    <RoadTable direction="west"/>
                 </div>
             </div>
         </>

@@ -1,5 +1,4 @@
-package org.example;
-import org.springframework.beans.factory.annotation.Value;
+package org.example.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

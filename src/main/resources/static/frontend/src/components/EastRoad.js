@@ -1,11 +1,11 @@
-import react from "react";
+import react, {useEffect, useState} from "react";
 import "../style/Roads.css"
 
 
 const EastRoad=()=>{
     return(
-        <div className="horizontal_road">
-        </div>
+        <>
+        </>
     )
 }
 

@@ -6,5 +6,5 @@ import lombok.Data;
 public class VehicleDto {
     private String VehicleId;
     private int waitingTime;
-    private String encRoad;
+    private String endRoad;
 }

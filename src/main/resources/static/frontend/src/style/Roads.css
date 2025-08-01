@@ -1,27 +1,18 @@
-.vertical_road{
+.tables {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    place-content: end space-between;
+}
+
+.road_tables {
+    display: grid;
+    grid-template-columns: repeat(4,150px);
+}
+
+.roadTable {
     width: 150px;
-    height: 900px;
-    background-color: #7db67d;
+    height: auto;
     border: solid 1px black;
-}
-
-.vertical_roads {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(2, 150px);
-}
-
-.horizontal_road{
-    width: 900px;
-    height: 150px;
-    background-color: #7db67d;
-    border: solid 1px black;
-}
-
-.horizontal_roads {
-    position: absolute;
-    display: grid;
-    grid-template-rows: repeat(2, 150px);
 }
 
 .crossroad {
@@ -31,4 +22,31 @@
     align-items: center;
     height: 100vh;
     margin: 0;
+}
+
+
+.grass {
+    background-color: darkgreen;
+}
+
+.vertical {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.horizontal {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.grid {
+    background-color: #282c34;
+    width: 700px;
+    height: 700px;
+    grid-template-columns: auto auto auto;
+    display: grid;
+}
+
+.road_element {
+    border: solid 1px #95999b;
 }
