@@ -1,4 +1,5 @@
 import react, {useEffect, useState} from "react";
+import TrafficLight from "./TrafficLight";
 
 const CrossRoad=()=>{
     const [vehiclesOnRoads, setVehiclesOnRoad] = useState({})
@@ -22,6 +23,7 @@ const CrossRoad=()=>{
                 <div className="vertical">
                     <div className="road_element_north">
                         {renderCars(vehiclesOnRoads.NORTH)}
+                        <TrafficLight/>
                     </div>
                     <div className="road_element" ></div>
                 </div>

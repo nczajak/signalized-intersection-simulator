@@ -2,6 +2,8 @@ package org.example.Model;
 
 import org.example.Enum.Colour;
 import org.example.Enum.MoveDirection;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 

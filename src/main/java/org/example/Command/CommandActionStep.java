@@ -21,6 +21,7 @@ public class CommandActionStep implements CommandAction {
         }
     }
 
+
     public CommandActionStepDto toDto(){
         CommandActionStepDto commandActionStepDto = new CommandActionStepDto();
         commandActionStepDto.setType("step");

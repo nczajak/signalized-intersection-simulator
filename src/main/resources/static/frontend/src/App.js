@@ -1,8 +1,4 @@
 import ActionDisplay from "./components/ActionDisplay";
-import NorthRoad from "./components/NorthRoad"
-import SouthRoad from "./components/SouthRoad";
-import EastRoad from "./components/EastRoad";
-import WestRoad from "./components/WestRoad";
 import RoadTable from "./components/RoadTable";
 import CrossRoad from "./components/CrossRoad";
 

@@ -1,14 +1,18 @@
 package org.example.controllers;
 
+import org.example.Enum.MoveDirection;
 import org.example.Enum.RoadDirection;
 import org.example.Model.CrossRoad;
 import org.example.dtos.VehicleDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/road")
@@ -48,4 +52,11 @@ public class CrossRoadController {
         return crossRoad.getVehiclesDtoFromRoad(RoadDirection.WEST);
     }
 
+    @GetMapping("current-moves")
+    public List<String> currentMovesToString() {
+        return crossRoad.getCurrentMoves()
+                .stream()
+                .map(MoveDirection::name)
+                .collect(Collectors.toList());
+    }
 }

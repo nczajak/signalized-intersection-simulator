@@ -15,6 +15,7 @@ public class Simulation {
     private final ActionStorageService storageService;
     private final CrossRoad crossRoad;
 
+
     public Simulation(ActionStorageService storageService, CrossRoad crossRoad) {
         this.storageService = storageService;
         this.crossRoad = crossRoad;
