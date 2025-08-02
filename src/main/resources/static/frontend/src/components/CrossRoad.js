@@ -3,12 +3,21 @@ import TrafficLight from "./TrafficLight";
 
 const CrossRoad=()=>{
     const [vehiclesOnRoads, setVehiclesOnRoad] = useState({})
+    const [currentMoves, setCurrentMoves] = useState([])
+
+    useEffect(()=>{
+        fetch("http://localhost:8080/road/current-moves")
+            .then(res=>res.json())
+            .then(data=>setCurrentMoves(data))
+    });
 
     useEffect(() => {
         fetch("http://localhost:8080/road")
             .then(res=>res.json())
             .then(data=>setVehiclesOnRoad(data))
     }, );
+
+
 
     const renderCars = (amount)=>{
         return Array.from({length: amount || 0}).map((_,index)=>(

@@ -69,6 +69,14 @@ public class CrossRoad {
         return moves;
     }
 
+    public Map<Road, Integer> getVehiclesAmountOnRoads(){
+        Map<Road,Integer> statusMap = new HashMap<>();
+        for(Road road: getRoads()){
+            statusMap.put(road,road.getVehiclesAmount());
+        }
+        return statusMap;
+    }
+
     public void report(){
         for (Road road: roads.values()){
             System.out.println(road.getDirection()+" : " +road.getVehiclesAmount());

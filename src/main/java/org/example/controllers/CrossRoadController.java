@@ -3,6 +3,7 @@ package org.example.controllers;
 import org.example.Enum.MoveDirection;
 import org.example.Enum.RoadDirection;
 import org.example.Model.CrossRoad;
+import org.example.Model.Road;
 import org.example.dtos.VehicleDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,11 +26,13 @@ public class CrossRoadController {
 
     @GetMapping
     public Map<String, Integer> getRoads(){
-        Map<String, Integer> status = new HashMap<>();
-        crossRoad.getRoadsSortedByPriority().forEach(road ->
-                status.put(road.getDirection().name(), road.getVehiclesAmount())
-        );
-        return status;
+        Map<Road,Integer> statusMap = crossRoad.getVehiclesAmountOnRoads();
+        return statusMap.entrySet()
+                .stream()
+                .collect(Collectors.toMap(
+                        entry -> entry.getKey().toString(),
+                        Map.Entry::getValue
+                ));
     }
 
     @GetMapping("/north")
