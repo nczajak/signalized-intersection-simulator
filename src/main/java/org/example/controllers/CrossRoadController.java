@@ -1,5 +1,6 @@
 package org.example.controllers;
 
+import org.example.Enum.Colour;
 import org.example.Enum.MoveDirection;
 import org.example.Enum.RoadDirection;
 import org.example.Model.CrossRoad;
@@ -33,6 +34,11 @@ public class CrossRoadController {
                         entry -> entry.getKey().toString(),
                         Map.Entry::getValue
                 ));
+    }
+
+    @GetMapping("/lights")
+    public Map<String,String> getLights(){
+        return crossRoad.getLightColours();
     }
 
     @GetMapping("/north")

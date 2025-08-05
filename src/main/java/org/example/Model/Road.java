@@ -30,6 +30,9 @@ public class Road {
             vehicle.increaseWaitingTime();
         }
     }
+    public Colour getTrafficLightColour(){
+        return this.trafficLight.getColour();
+    }
 
 
     public MoveDirection getFirstVehicleDirection(){

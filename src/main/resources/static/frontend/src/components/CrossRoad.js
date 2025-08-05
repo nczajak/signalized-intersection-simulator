@@ -4,6 +4,9 @@ import TrafficLight from "./TrafficLight";
 const CrossRoad=()=>{
     const [vehiclesOnRoads, setVehiclesOnRoad] = useState({})
     const [currentMoves, setCurrentMoves] = useState([])
+    const [lights,setLights] = useState({})
+
+
 
     useEffect(()=>{
         fetch("http://localhost:8080/road/current-moves")
@@ -31,8 +34,8 @@ const CrossRoad=()=>{
                 <div className="grass"></div>
                 <div className="vertical">
                     <div className="road_element_north">
+                        <TrafficLight direction={"north box"}/>
                         {renderCars(vehiclesOnRoads.NORTH)}
-                        <TrafficLight/>
                     </div>
                     <div className="road_element" ></div>
                 </div>
@@ -40,6 +43,7 @@ const CrossRoad=()=>{
                 <div className="horizontal">
                     <div className="road_element"></div>
                     <div className="road_element_west">
+                        <TrafficLight direction={"west box"}/>
                         {renderCars(vehiclesOnRoads.WEST)}
                     </div>
                 </div>
@@ -55,6 +59,7 @@ const CrossRoad=()=>{
                 </div>
                 <div className="horizontal">
                     <div className="road_element_east">
+                        <TrafficLight direction={"east box"}/>
                         {renderCars(vehiclesOnRoads.EAST)}
                     </div>
                     <div className="road_element"></div>
@@ -63,6 +68,7 @@ const CrossRoad=()=>{
                 <div className="vertical">
                     <div className="road_element"></div>
                     <div className="road_element_south">
+                        <TrafficLight direction={"south box"}/>
                         {renderCars(vehiclesOnRoads.SOUTH)}
                     </div>
                 </div>

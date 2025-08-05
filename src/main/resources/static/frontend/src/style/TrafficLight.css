@@ -1,5 +1,56 @@
 .box{
-    background-color: #161717;
-    height: 100px;
-    width: 100px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.north{
+    height: 10%;
+    width: 80%;
+}
+
+.west{
+    height: 80%;
+    width: 10%;
+    flex-direction: column-reverse;
+}
+.east{
+    height: 80%;
+    width: 10%;
+    flex-direction: column;
+}
+
+.south{
+    height: 10%;
+    width: 80%;
+    flex-direction: row-reverse;
+}
+
+.not_active{
+    background-color: #3f3f3f;
+    border-radius: 40px;
+    width: 20px;
+    height: 20px;
+}
+
+
+.red{
+    background-color: red;
+    border-radius: 40px;
+    width: 20px;
+    height: 20px;
+}
+
+.green{
+    background-color: lawngreen;
+    border-radius: 40px;
+    width: 20px;
+    height: 20px;
+}
+
+.yellow{
+    background-color: yellow;
+    border-radius: 40px;
+    width: 20px;
+    height: 20px;
 }

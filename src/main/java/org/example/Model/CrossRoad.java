@@ -2,6 +2,7 @@ package org.example.Model;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.example.Enum.Colour;
 import org.example.Enum.MoveDirection;
 import org.example.Enum.RoadDirection;
 import org.example.dtos.VehicleDto;
@@ -75,6 +76,14 @@ public class CrossRoad {
             statusMap.put(road,road.getVehiclesAmount());
         }
         return statusMap;
+    }
+
+    public Map<String, String> getLightColours(){
+        Map<String,String> colourStatus = new HashMap<>();
+        for(Road road: roads.values()){
+            colourStatus.put(road.getDirection().name(),road.getTrafficLightColour().name());
+        }
+        return colourStatus;
     }
 
     public void report(){

@@ -13,7 +13,7 @@ const RoadTable =({direction})=>{
 
     return(
         <div className="roadTable">
-            <div>{direction}</div>
+            <div className="tableHeader">{direction.toUpperCase()}</div>
             <div>
                 {(vehicles.length > 0) && (
                     <div>

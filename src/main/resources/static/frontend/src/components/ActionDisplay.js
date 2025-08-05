@@ -11,12 +11,12 @@ const ActionDisplay = ()=>{
 
     return (
         <div>
-            <div>Action</div>
             <div className="roadTable">
-                {(actions.length>0)&&(
+                <div className="tableHeader">Action</div>
+                {(actions.length > 0) && (
                     <div>
-                        {actions.map((action,id)=>(
-                            <div key={id}>
+                        {actions.map((action, id) => (
+                            <div key={id} className="data_in_table">
                                 <p>{action.type}</p>
                             </div>)
                         )}
