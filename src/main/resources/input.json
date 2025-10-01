@@ -25,20 +25,6 @@
       "endRoad": "south"
 
     },
-
-    {
-
-      "type": "step"
-
-    },
-
-    {
-
-      "type": "step"
-
-    },
-
-
     {
 
       "type": "addVehicle",
@@ -56,6 +42,18 @@
 
       "vehicleId": "vehicle4",
 
+      "startRoad": "east",
+
+      "endRoad": "south"
+
+    },
+
+    {
+
+      "type": "addVehicle",
+
+      "vehicleId": "vehicle5",
+
       "startRoad": "west",
 
       "endRoad": "south"
@@ -63,16 +61,15 @@
     },
     {
 
-      "type": "step"
+      "type": "addVehicle",
 
-    },
+      "vehicleId": "vehicle6",
 
-    {
+      "startRoad": "west",
 
-      "type": "step"
+      "endRoad": "south"
 
     }
-
   ]
 
 }
