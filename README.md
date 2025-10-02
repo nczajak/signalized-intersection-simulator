@@ -39,5 +39,5 @@ The simulator uses a **priority-based traffic algorithm**:
    - Vehicles on roads with green lights can move through the intersection simultaneously.
 
 ---
-
+<img src="frontend_image.png" alt="Opis alternatywny" width="1000"/>
 
